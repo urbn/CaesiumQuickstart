@@ -1,0 +1,8 @@
+backports.ssl-match-hostname==3.4.0.2
+certifi==14.05.14
+greenlet==0.4.3
+motor==0.3.2
+pymongo==2.7.1
+tornado==3.2
+wsgiref==0.1.2
+Caesium>=0.1
