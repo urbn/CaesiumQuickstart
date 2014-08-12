@@ -21,7 +21,7 @@ timestamp as the value for the time you would like this document to be scheduled
 Scheduled actions map to RESTful verbs, POST with ttl would be a scheduled insert, PUT with ttl is a scheduled PATCH to the object,
 and DELETE with ttl is a scheduled delete.  Deletes do not delete from the revisions collection for that object type.
 
-##Example Non-Scheduled Request
+##Example Scheduled Requests Flow
 
 In the following flow, we will create a new resource, update it with a scheduled patch, Get it again to see those changes, then delete.
 
