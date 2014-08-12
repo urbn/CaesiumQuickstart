@@ -6,3 +6,4 @@ pymongo==2.7.1
 tornado==3.2
 wsgiref==0.1.2
 Caesium>=0.1
+jsonschema==2.3.0
