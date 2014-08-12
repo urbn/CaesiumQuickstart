@@ -40,6 +40,7 @@ Headers:
 ```
 
 PUT /comment/53ea6636717cc88c7b499a54
+
 Headers:
 - Content-Type: application/json
 - ttl: 1401678643
@@ -60,7 +61,10 @@ GET /comment/53ea6636717cc88c7b499a54
     "new_attribute": 12345
 }
 ```
+
 DELETE /comment/53ea6636717cc88c7b499a54
+
+Headers:
 - ttl: 1401678643
 
 ###Non-Scheduled Requests
@@ -69,6 +73,6 @@ If you want to use Caesium synchronously, it is entirely ok to just remove the "
 immediately without creating a revision.  Very similar to how a standard API works on a RESTful resource.
 
 Also see:
-http://www.tornadoweb.org/en/stable/
-http://motor.readthedocs.org/en/stable/index.html
+- http://www.tornadoweb.org/en/stable/
+- http://motor.readthedocs.org/en/stable/index.html
 
