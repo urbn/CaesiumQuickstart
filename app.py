@@ -9,16 +9,15 @@ from caesium.document import BaseAsyncMotorDocument, AsyncRevisionStackManager
 from settings import settings
 import logging
 
-class FooHandler(BaseRestfulMotorHandler):
+class CommentHandler(BaseRestfulMotorHandler):
 
     def initialize(self):
-        self.object_name = "Foo"
+        self.object_name = "comment"
         self.client = BaseAsyncMotorDocument(self.object_name, self.settings)
 
-
 url_patterns = [
-    (r"/foo", FooHandler),
-    (r"/foo/([0-9a-zA-Z]+)", FooHandler),
+    (r"/comment", CommentHandler),
+    (r"/comment/([0-9a-zA-Z]+)", CommentHandler),
 ]
 
 class App(tornado.web.Application):

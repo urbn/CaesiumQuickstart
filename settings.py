@@ -33,7 +33,7 @@ settings = {}
 settings['scheduler']= {
     "timeout_in_milliseconds": 2000,
     "lazy_migrated_published_by_default": True,
-    "collections" : ["Foo"]
+    "collections" : ["comment"]
 }
 
 #Static mongo connection settings
