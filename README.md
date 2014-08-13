@@ -14,13 +14,6 @@ The purpose of this project is to be a starting point for the Caesium python fra
 
 See app.py for implementation.
 
-##Scheduling
-Requests that you want to schedule should have a "ttl" header with a UTC
-timestamp as the value for the time you would like this document to be scheduled.
-
-Scheduled actions map to RESTful verbs, POST with ttl would be a scheduled insert, PUT with ttl is a scheduled PATCH to the object,
-and DELETE with ttl is a scheduled delete.  Deletes do not delete from the revisions collection for that object type.
-
 ##Example Scheduled Requests Flow
 
 In the following flow, we will create a new resource, update it with a scheduled patch, Get it again to see those changes, then delete.
@@ -29,7 +22,7 @@ POST /comment
 
 Headers:
 - Content-Type: application/json
-- ttl: 1401678643
+- Caesium-TOA: 1401678643
 
 ```
 {
@@ -43,7 +36,7 @@ PUT /comment/53ea6636717cc88c7b499a54
 
 Headers:
 - Content-Type: application/json
-- ttl: 1401678643
+- Caesium-TOA: 1401678643
 
 ```
 {
@@ -65,7 +58,7 @@ GET /comment/53ea6636717cc88c7b499a54
 DELETE /comment/53ea6636717cc88c7b499a54
 
 Headers:
-- ttl: 1401678643
+- Caesium-TOA: 1401678643
 
 ###Non-Scheduled Requests
 

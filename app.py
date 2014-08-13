@@ -27,7 +27,11 @@ class App(tornado.web.Application):
         tornado.web.Application.__init__(self, url_patterns, **settings)
 
         #Document publisher, this allows for patches to be applied
-        document_publisher = tornado.ioloop.PeriodicCallback(AsyncRevisionStackManager(settings).publish, settings['scheduler']["timeout_in_milliseconds"], io_loop=tornado.ioloop.IOLoop.current())
+        document_publisher = tornado.ioloop.PeriodicCallback(AsyncRevisionStackManager(settings).publish,
+                                                             settings['scheduler']["timeout_in_milliseconds"],
+                                                             io_loop=tornado.ioloop.IOLoop.current()
+        )
+
         document_publisher.start()
 
 application = App()
