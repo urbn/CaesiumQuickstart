@@ -1,7 +1,4 @@
-__author__ = 'hunterc1'
-
 """This is an example settings file that can utialize caesium"""
-
 
 import tornado
 import logging, logging.config
