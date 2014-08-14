@@ -27,7 +27,8 @@ Headers:
 ```
 {
     "title": "Comment Title",
-    "comment": "Check out this new awesome comment",
+    "text": "Check out this new awesome comment",
+    "username": "chunter",
     "id": "53ea6636717cc88c7b499a54"
 }
 ```
@@ -41,6 +42,8 @@ Headers:
 ```
 {
     "title": "My Comment Title Update",
+    "text": "Check out this new awesome comment",
+    "username": "chunter",
     "new_attribute": 12345
 }
 ```
@@ -50,7 +53,8 @@ GET /comment/53ea6636717cc88c7b499a54
 {
     "id": "53ea6636717cc88c7b499a54",
     "title": "My Comment Title Update",
-    "comment": "Check out this new awesome comment",
+    "text": "Check out this new awesome comment",
+    "username": "chunter",
     "new_attribute": 12345
 }
 ```

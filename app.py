@@ -9,10 +9,33 @@ from settings import settings
 import logging
 
 class CommentHandler(BaseRestfulMotorHandler):
+    """
+    An example handler for a Comment resource
+
+    """
+
+    #JSON Schema definition is used for validation of post/put bodies
+    SCHEMA = {
+        "title":"Example Comment Schema",
+        "type": "object",
+        "required": ["title", "username", "text"],
+        "properties" : {
+            "title": {
+                "type": "string",
+            },
+            "username": {
+                "type": "string",
+            },
+            "text": {
+                "type": "string",
+            }
+        }
+    }
 
     def initialize(self):
+        super(self.__class__, self).initialize()
         self.object_name = "comment"
-        self.client = BaseAsyncMotorDocument(self.object_name, self.settings)
+        self.client = BaseAsyncMotorDocument(self.object_name, self.settings, schema=self.SCHEMA)
 
 url_patterns = [
     (r"/comment", CommentHandler),
