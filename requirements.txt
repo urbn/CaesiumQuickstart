@@ -1,1 +1,1 @@
-Caesium==0.3
+Caesium>=0.3
